@@ -1,16 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Theme Park</title> 
-
+	<title>Theme Park</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Test Styles -->
+	<style>
+		#body-container {
+			height: 100%;
+			width: 100%;
+			border: 5px solid green;
+		}
+
+		.container-fluid > .row {
+			min-height: 100%;
+		}
+
+		.row {
+			border: 1px solid red;
+		}
+
+		.col-md-4 {
+			border: 1px solid blue;
+			min-width: 200px;
+			min-height: 200px;
+		}
+
+		div.container-fluid > .row > .col-md-4 {
+			max-height: 100%;
+		}
+	</style>
+	<!-- / Test Styles -->
+
 </head>
 <body>
 
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" src="images/logo.png" width="30px" height="30px">
+	      </a>
+	    </div>
+	 <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <form class="navbar-form navbar-left">
+	        <div class="form-group">
+	          <input type="text" id="search-bar" class="form-control" placeholder="Search">
+	        </div>
+	        <button type="submit" class="btn btn-default">Submit</button>
+	      </form>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Times <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#" class="ride-times">07:00am - 08:00am</a></li>
+	            <li><a href="#" class="ride-times">08:00am - 09:00am</a></li>
+	            <li><a href="#" class="ride-times">09:00am - 10:00am</a></li>
+	            <li><a href="#" class="ride-times">10:00am - 11:00am</a></li>
+	            <li><a href="#" class="ride-times">12:00pm - 01:00pm</a></li>
+	            <li><a href="#" class="ride-times">01:00pm - 02:00pm</a></li>
+	            <li><a href="#" class="ride-times">02:00pm - 03:00pm</a></li>
+	            <li><a href="#" class="ride-times">03:00pm - 04:00pm</a></li>
+	            <li><a href="#" class="ride-times">04:00pm - 05:00pm</a></li>
+	            <li><a href="#" class="ride-times">05:00pm - 06:00pm</a></li>
+	            <li><a href="#" class="ride-times">06:00pm - 07:00pm</a></li>
+	            <li><a href="#" class="ride-times">07:00pm - 08:00pm</a></li>
+	            <li><a href="#" class="ride-times">08:00pm - 09:00pm</a></li>
+	            <li><a href="#" class="ride-times">09:00pm - 10:00pm</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav><!-- / Nav Bar -->
 
+	<div id="body-container" class="container-fluid">
+		<div class="row">
+		  <div class="col-md-4">
+		  	<h3>Ride Name (Type)</h3>
+		  	<ul>
+		  		<li>Description</li>
+		  		<li>Time</li>
+		  	</ul>
+		  </div>
+		  <div class="col-md-8">
+				<div class="row">
+				  <div class="col-md-4">Grid 1</div>
+				  <div class="col-md-4">Grid 2</div>
+				  <div class="col-md-4">Grid 3</div>
+				</div>
+				<div class="row">
+				  <div class="col-md-4">Grid 4</div>
+				  <div class="col-md-4">Grid 5: Currently selected to be empty</div>
+				  <div class="col-md-4">Grid 6</div>
+				</div>
+				<div class="row">
+				  <div class="col-md-4">Grid 7</div>
+				  <div class="col-md-4">Grid 8: Currently selected to be empty</div>
+				  <div class="col-md-4">Grid 9</div>
+				</div>
+		  </div>
+		</div>
+	</div>
+
+	<footer class="navbar-fixed-bottom">
+		<div class="container">
+			<p>FOOTER</p>
+		</div>
+	</footer>
 
 
 	<script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="dist/app.js"></script>
 </body>
 </html>
