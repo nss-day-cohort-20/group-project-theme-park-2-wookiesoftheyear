@@ -1,8 +1,4 @@
 'use strict';
-let parkObj = {};
-let areaObj = {};
-let typesObj = {};
-let attractionObj = {};
 
 
 let promisePark = function() {
@@ -59,28 +55,3 @@ let promiseAttraction = function(dataPromisePark, dataPromiseArea, dataPromiseTy
 		});
 	});
 };
-
-
-
-promisePark()
-.then( function(dataPromisePark) {
-	parkObj = dataPromisePark;
-	// console.log("park", parkObj);
-	return promiseArea();
-}).then( function(dataPromiseArea){
-	areaObj = dataPromiseArea;
-	// console.log("areas", areaObj);
-	return promiseType();
-}).then( function(dataPromiseType) {
-	typesObj = dataPromiseType;
-	// console.log("types", typesObj);
-	return promiseAttraction();
-}).then( function(dataPromiseAttraction) {
-	attractionObj = dataPromiseAttraction;
-	console.log("Data", parkObj, areaObj, typesObj, attractionObj);
-})
-.catch(function(error){
-	console.log("error", error.statusText);
-});
-
-console.log("ay");
