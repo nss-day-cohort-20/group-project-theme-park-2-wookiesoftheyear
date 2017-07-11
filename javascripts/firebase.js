@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 let promisePark = function() {
 	return new Promise( function(resolve, reject) {
 		$.ajax({
@@ -56,5 +55,3 @@ let promiseAttraction = function(dataPromisePark, dataPromiseArea, dataPromiseTy
 		});
 	});
 };
-
-module.exports = {promiseAttraction, promiseType, promiseArea, promisePark};
