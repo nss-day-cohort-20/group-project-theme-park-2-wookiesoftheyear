@@ -55,3 +55,5 @@ let promiseAttraction = function(dataPromisePark, dataPromiseArea, dataPromiseTy
 		});
 	});
 };
+
+module.exports = {promiseArea, promiseAttraction, promisePark, promiseType};
