@@ -21,12 +21,7 @@ submitSearch.addEventListener("click", function() {
 		
 	}
 	
-});
-
-
-
-
-	
+});	
 };
 
 module.exports = {listRideNames};
