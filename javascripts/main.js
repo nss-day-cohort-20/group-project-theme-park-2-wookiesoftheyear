@@ -5,10 +5,10 @@ let mapStuff = {
 	nameFilter: require("./name"),
 };
 
-let parkObj = {};
-let areaObj = {};
-let typesObj = {};
-let attractionObj = {};
+let parkObj = [];
+let areaObj = [];
+let typesObj = [];
+let attractionObj = [];
 
 mapStuff.loader.promisePark()
 .then( function(dataPromisePark) {
@@ -25,7 +25,7 @@ mapStuff.loader.promisePark()
 	return mapStuff.loader.promiseAttraction();
 }).then( function(dataPromiseAttraction) {
 	attractionObj = dataPromiseAttraction;
-	mapStuff.nameFilter.test(parkObj, areaObj, typesObj, attractionObj);
+	mapStuff.nameFilter.listRideNames(parkObj, areaObj, typesObj, attractionObj);
 	// do something here
 })
 .catch(function(error){

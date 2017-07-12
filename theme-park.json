@@ -28,25 +28,25 @@
         {
             "id": 3,
             "name": "Frontierland",
-            "decription": "It may be argued that Frontierland is the Magic Kingdom's best land. Themed to mimic the architecture of the American West, Frontierland includes two of the Magic Kingdom's headliner rides (Splash Mountain and Big Thunder Mountain), one of the Magic Kingdom's best spots to relax and unwind (Tom Sawyer Island), arguably the park's best counter service restaurant (Pecos Bill's Tall Tale Inn and Cafe) and some of the best spots for viewing the afternoon and evening parades.",
+            "description": "It may be argued that Frontierland is the Magic Kingdom's best land. Themed to mimic the architecture of the American West, Frontierland includes two of the Magic Kingdom's headliner rides (Splash Mountain and Big Thunder Mountain), one of the Magic Kingdom's best spots to relax and unwind (Tom Sawyer Island), arguably the park's best counter service restaurant (Pecos Bill's Tall Tale Inn and Cafe) and some of the best spots for viewing the afternoon and evening parades.",
             "colorTheme": "A37849"
         },
         {
             "id": 4,
             "name": "Liberty Square",
-            "decription": "Liberty Square re-creates America at the time of the American Revolution. The architecture is Federal or Colonial, and provides a seamless transition from the edge of Fantasyland to Frontierland. A real, 130-year-old live oak, the Liberty Tree, lends dignity and grace to the setting.",
+            "description": "Liberty Square re-creates America at the time of the American Revolution. The architecture is Federal or Colonial, and provides a seamless transition from the edge of Fantasyland to Frontierland. A real, 130-year-old live oak, the Liberty Tree, lends dignity and grace to the setting.",
             "colorTheme": "2594D9"
         },
         {
             "id": 5,
             "name": "Fantasyland",
-            "decription": "Fantasyland the heart of the Magic Kingdom and a truly enchanting place spread gracefully like a miniature Alpine village beneath the steepled towers of Cinderella Castle is divided into three distinct sections. Directly behind Cinderella Castle and set upon a snowcapped mountain is Beast’s Castle, part of a Beauty and the Beast–themed area. The middle of Fantasyland holds the headliners, including Under the Sea - Journey of the Little Mermaid and Seven Dwarfs Mine Train. The placement of these two attractions allows good traffic flow either to the left (toward Beast’s Castle) for dining, to the right for attractions geared to smaller children, or back to the original part of Fantasyland for classic attractions such as Peter Pan’s Flight and The Many Adventures of Winnie the Pooh. The far-right corner of Fantasyland includes Dumbo the Flying Elephant, The Barnstormer featuring the Great Goofini, and the Walt Disney World Railroad - Fantasyland Station is called Storybook Circus as an homage to Disney’s Dumbo film.",
+            "description": "Fantasyland the heart of the Magic Kingdom and a truly enchanting place spread gracefully like a miniature Alpine village beneath the steepled towers of Cinderella Castle is divided into three distinct sections. Directly behind Cinderella Castle and set upon a snowcapped mountain is Beast’s Castle, part of a Beauty and the Beast–themed area. The middle of Fantasyland holds the headliners, including Under the Sea - Journey of the Little Mermaid and Seven Dwarfs Mine Train. The placement of these two attractions allows good traffic flow either to the left (toward Beast’s Castle) for dining, to the right for attractions geared to smaller children, or back to the original part of Fantasyland for classic attractions such as Peter Pan’s Flight and The Many Adventures of Winnie the Pooh. The far-right corner of Fantasyland includes Dumbo the Flying Elephant, The Barnstormer featuring the Great Goofini, and the Walt Disney World Railroad - Fantasyland Station is called Storybook Circus as an homage to Disney’s Dumbo film.",
             "colorTheme": "E73C81"
         },
         {
             "id": 6,
             "name": "Tomorrowland",
-            "decription": "Here in Tomorrowland, the future is today! So, ready your rockets, boys and girls, as you blast into the twin orbits of innovation and exploration. But Tomorrowland is more than a fascinating collection of gizmos — it's a spaceport where your imagination lands each day to glimpse otherworldly wonders, embark on fantastic voyages, and witness the pioneering of the human spirit.",
+            "description": "Here in Tomorrowland, the future is today! So, ready your rockets, boys and girls, as you blast into the twin orbits of innovation and exploration. But Tomorrowland is more than a fascinating collection of gizmos — it's a spaceport where your imagination lands each day to glimpse otherworldly wonders, embark on fantastic voyages, and witness the pioneering of the human spirit.",
             "colorTheme": "3E4D8C"
         },
         {
