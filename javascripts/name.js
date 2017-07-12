@@ -4,6 +4,7 @@ let listRideNames = function(parkObj, areaObj, typesObj, attractionObj){
 	
 	let Handlebars = require('hbsfy/runtime');	
 	let sideBarTemplate = require('../templates/sideBar.hbs');
+	let altTimeTemplate = require('../templates/timeSideBar.hbs');
 	
 	let searchRides = document.getElementById("search-bar");
 	let submitSearch = document.getElementById("submit-button");
@@ -14,11 +15,13 @@ submitSearch.addEventListener("click", function() {
 		
 		if (searchRides.value === attractionObj[i].name) {
 			
-			$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));
-			
-			console.log(attractionObj[i].name, attractionObj[i].description);
+			if (attractionObj[i].hasOwnProperty("times")) {
+				$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));
+				
+			} else {
+				$("#ridesToDom").append(altTimeTemplate(attractionObj[i]));
+			}
 		}
-		
 	}
 	
 });	
