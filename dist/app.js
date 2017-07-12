@@ -1,22 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
 },{}],2:[function(require,module,exports){
-'use strict';
-
-const domStuff = Object.create(null);
-
-let $areasContainer = $("#areas");
-
-domStuff.listAreas = function(area) {
-	console.log("areas from listAreas", area);
-	$areasContainer.append('<h3>${area}</h2>');
-
-};
-
-module.exports = domStuff;
-
-console.log("my dude");
-},{}],3:[function(require,module,exports){
+arguments[4][1][0].apply(exports,arguments)
+},{"dup":1}],3:[function(require,module,exports){
 arguments[4][1][0].apply(exports,arguments)
 },{"dup":1}],4:[function(require,module,exports){
 'use strict';
@@ -121,6 +107,7 @@ let listRideNames = function(parkObj, areaObj, typesObj, attractionObj){
 	
 	let Handlebars = require('hbsfy/runtime');	
 	let sideBarTemplate = require('../templates/sideBar.hbs');
+	let altTimeTemplate = require('../templates/timeSideBar.hbs');
 	
 	let searchRides = document.getElementById("search-bar");
 	let submitSearch = document.getElementById("submit-button");
@@ -131,23 +118,20 @@ submitSearch.addEventListener("click", function() {
 		
 		if (searchRides.value === attractionObj[i].name) {
 			
-			$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));
-			
-			console.log(attractionObj[i].name, attractionObj[i].description);
+			if (attractionObj[i].hasOwnProperty("times")) {
+				$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));
+				
+			} else {
+				$("#ridesToDom").append(altTimeTemplate(attractionObj[i]));
+			}
 		}
-		
 	}
 	
-});
-
-
-
-
-	
+});	
 };
 
 module.exports = {listRideNames};
-},{"../templates/sideBar.hbs":28,"hbsfy/runtime":27}],7:[function(require,module,exports){
+},{"../templates/sideBar.hbs":28,"../templates/timeSideBar.hbs":29,"hbsfy/runtime":27}],7:[function(require,module,exports){
 arguments[4][1][0].apply(exports,arguments)
 },{"dup":1}],8:[function(require,module,exports){
 'use strict';
@@ -1293,7 +1277,20 @@ module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":f
     + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
     + "</p>\n\n	<ul>\n		<li>"
     + alias4(((helper = (helper = helpers.times || (depth0 != null ? depth0.times : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"times","hash":{},"data":data}) : helper)))
-    + "</li>\n	</ul>\n\n";
+    + "</li>\n\n	</ul>\n\n";
+},"useData":true});
+
+},{"hbsfy/runtime":27}],29:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var HandlebarsCompiler = require('hbsfy/runtime');
+module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "<h3>"
+    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+    + "</h3>\n	<p>"
+    + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
+    + "</p>\n\n	<ul>\n		<li>9:00AM to 10:00PM</li>\n\n	</ul>";
 },"useData":true});
 
 },{"hbsfy/runtime":27}]},{},[1,2,3,4,5,6,7]);
