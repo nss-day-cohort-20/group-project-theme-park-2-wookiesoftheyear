@@ -5,7 +5,8 @@ let mapStuff = {
 	nameFilter: require("./name"),
 	timeFilter: require("./time"),
 	areaFilter: require("./area"),
-	mapFilter: require("./clickMap")
+	mapFilter: require("./clickMap"),
+	links: require("./clickHyperLinks")
 };
 
 let parkObj = [];
@@ -31,8 +32,9 @@ mapStuff.loader.promisePark()
 	mapStuff.mapFilter.mapSort(parkObj, areaObj, typesObj, attractionObj);
 	mapStuff.timeFilter.timeSort(parkObj, areaObj, typesObj, attractionObj);
 	mapStuff.nameFilter.listRideNames(parkObj, areaObj, typesObj, attractionObj);
+	mapStuff.links.hyperLinks(parkObj, areaObj, typesObj, attractionObj);
 	// do something here
 })
 .catch(function(error){
-	console.log("error", error.statusText);
+	console.log("error", error);
 });
