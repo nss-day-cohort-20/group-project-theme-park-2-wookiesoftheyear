@@ -21,18 +21,10 @@ timeSearch.addEventListener("click",function() {
 	for (let k = 0; k < attractionObj.length; k++) {
 		console.log("for loop");
 		if (attractionObj[k].hasOwnProperty("times")!=true) {
-			{console.log(attractionObj[k]);
+			console.log(attractionObj[k]);
 			$("#ridesToDom").append(altTimeTemplate(attractionObj[k]));
-		} else {attractionObj[k]
-
-		}
-		
-
-		// if(!!attractionObj[k].hasOwnProperty("times"));
-		// 	$("#ridesToDom").append(altTimeTemplate(attractionObj[i]));
-		// } else if(timeSearch.value === attractionObj[k].times);
-		// 	$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));	
-	}
+		} else {}
+	
 }
 });
 };
@@ -40,9 +32,3 @@ timeSearch.addEventListener("click",function() {
 
 
 module.exports = {timeSort};
-
-
-// timeSearch.addEventListener("click", function() {
-// 	}
-// }
-// })};
