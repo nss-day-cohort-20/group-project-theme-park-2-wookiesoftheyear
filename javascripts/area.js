@@ -1,11 +1,13 @@
-'use strict';
+// 'use strict';
 
-let grid1 = $("#grid-1"),
-	grid2 =	$("#grid-2"),
-	grid3 =	$("#grid-3"),
-	grid4 =	$("#grid-4"),
-	grid5 =	$("#grid-5"),
-	grid6 =	$("#grid-6"),
-	grid7 = $("#grid-7"),
-	grid8 =	$("#grid-8"),
-	grid9 =	$("#grid-9");
+// let grid1 = $("#730217"),
+// 	grid2 =	$("#D15530"),
+// 	grid3 =	$("#A37849"),
+// 	grid4 =	$("#2594D9"),
+// 	grid5 =	$("#E73C81"),
+// 	grid6 =	$("#E73C81"),
+// 	grid7 = $("#F2CF53"),
+	
+
+// console.log(grid1);
+

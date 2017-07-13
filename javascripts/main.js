@@ -3,6 +3,8 @@
 let mapStuff = {
 	loader: require("./firebase"),
 	nameFilter: require("./name"),
+	timeFilter: require("./time"),
+	areaFilter: require("./area")
 };
 
 let parkObj = [];
@@ -25,6 +27,7 @@ mapStuff.loader.promisePark()
 	return mapStuff.loader.promiseAttraction();
 }).then( function(dataPromiseAttraction) {
 	attractionObj = dataPromiseAttraction;
+	mapStuff.timeFilter.timeSort(parkObj, areaObj, typesObj, attractionObj);
 	mapStuff.nameFilter.listRideNames(parkObj, areaObj, typesObj, attractionObj);
 	// do something here
 })
