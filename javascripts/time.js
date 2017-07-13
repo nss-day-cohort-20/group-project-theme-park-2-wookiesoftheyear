@@ -19,13 +19,11 @@ timeSearch.addEventListener("click",function() {
 	console.log(finalTime);
 		
 	for (let k = 0; k < attractionObj.length; k++) {
-		console.log("for loop");
+		// console.log("for loop");
 		if (attractionObj[k].hasOwnProperty("times")!=true) {
-			{console.log(attractionObj[k]);
+			console.log(attractionObj[k]);
 			$("#ridesToDom").append(altTimeTemplate(attractionObj[k]));
-		} else {attractionObj[k]
-
-		}
+		} else {}
 		
 
 		// if(!!attractionObj[k].hasOwnProperty("times"));
@@ -33,7 +31,6 @@ timeSearch.addEventListener("click",function() {
 		// } else if(timeSearch.value === attractionObj[k].times);
 		// 	$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));	
 	}
-}
 });
 };
 

@@ -1,0 +1,38 @@
+#body-container {
+    height: 100%;
+    width: 100%;
+    border: 5px solid green;
+}
+
+.container-fluid > .row {
+    min-height: 100%;
+}
+
+.row {
+    border: 1px solid red;
+}
+
+.col-md-4 {
+    border: 1px solid blue;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.scroll {
+    border: 6px solid blue;
+    overflow-y:scroll; 
+    height: 606px;
+}
+
+div.container-fluid > .row > .col-md-4 {
+    max-height: 100%;
+}
+
+.col-md-8 {
+    background-image: url("../images/map-of-disneyland.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-attachment: fixed;
+    background-size: contain;
+
+}
