@@ -12,9 +12,9 @@ let listRideNames = function(parkObj, areaObj, typesObj, attractionObj){
 	let submitSearch = document.getElementById("submit-button");
 
 submitSearch.addEventListener("click", function() {
-
+$("#ridesToDom").empty();
 	for (let i = 0; i < attractionObj.length; i++) {
-		if (searchRides.value === attractionObj[i].name) {
+		if (attractionObj[i].name.toUpperCase().includes(searchRides.value.toUpperCase())) {
 			if (attractionObj[i].hasOwnProperty("times")) {
 				$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));
 			} else {
