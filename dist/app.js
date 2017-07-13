@@ -1,10 +1,25 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+// 'use strict';
+
+// let grid1 = $("#730217"),
+// 	grid2 =	$("#D15530"),
+// 	grid3 =	$("#A37849"),
+// 	grid4 =	$("#2594D9"),
+// 	grid5 =	$("#E73C81"),
+// 	grid6 =	$("#E73C81"),
+// 	grid7 = $("#F2CF53"),
+	
+
+// console.log(grid1);
+
 
 },{}],2:[function(require,module,exports){
-arguments[4][1][0].apply(exports,arguments)
-},{"dup":1}],3:[function(require,module,exports){
-arguments[4][1][0].apply(exports,arguments)
-},{"dup":1}],4:[function(require,module,exports){
+
+},{}],3:[function(require,module,exports){
+'use strict';
+
+
+},{}],4:[function(require,module,exports){
 'use strict';
 
 
@@ -70,6 +85,8 @@ module.exports = {promiseArea, promiseAttraction, promisePark, promiseType};
 let mapStuff = {
 	loader: require("./firebase"),
 	nameFilter: require("./name"),
+	timeFilter: require("./time"),
+	areaFilter: require("./area")
 };
 
 let parkObj = [];
@@ -92,6 +109,7 @@ mapStuff.loader.promisePark()
 	return mapStuff.loader.promiseAttraction();
 }).then( function(dataPromiseAttraction) {
 	attractionObj = dataPromiseAttraction;
+	mapStuff.timeFilter.timeSort(parkObj, areaObj, typesObj, attractionObj);
 	mapStuff.nameFilter.listRideNames(parkObj, areaObj, typesObj, attractionObj);
 	// do something here
 })
@@ -100,10 +118,12 @@ mapStuff.loader.promisePark()
 });
 
 
-},{"./firebase":4,"./name":6}],6:[function(require,module,exports){
+},{"./area":1,"./firebase":4,"./name":6,"./time":7}],6:[function(require,module,exports){
 'use strict';
 
 let listRideNames = function(parkObj, areaObj, typesObj, attractionObj){
+
+	console.log("stuff", attractionObj);
 	
 	let Handlebars = require('hbsfy/runtime');	
 	let sideBarTemplate = require('../templates/sideBar.hbs');
@@ -115,12 +135,9 @@ let listRideNames = function(parkObj, areaObj, typesObj, attractionObj){
 submitSearch.addEventListener("click", function() {
 
 	for (let i = 0; i < attractionObj.length; i++) {
-		
 		if (searchRides.value === attractionObj[i].name) {
-			
 			if (attractionObj[i].hasOwnProperty("times")) {
 				$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));
-				
 			} else {
 				$("#ridesToDom").append(altTimeTemplate(attractionObj[i]));
 			}
@@ -132,8 +149,52 @@ submitSearch.addEventListener("click", function() {
 
 module.exports = {listRideNames};
 },{"../templates/sideBar.hbs":28,"../templates/timeSideBar.hbs":29,"hbsfy/runtime":27}],7:[function(require,module,exports){
-arguments[4][1][0].apply(exports,arguments)
-},{"dup":1}],8:[function(require,module,exports){
+'use strict';
+
+
+let timeSort = function(parkObj, areaObj, typesObj, attractionObj){
+
+
+	
+	let Handlebars = require('hbsfy/runtime');	
+	let sideBarTemplate = require('../templates/sideBar.hbs');
+	let altTimeTemplate = require('../templates/timeSideBar.hbs');
+
+	let timeSearch = document.getElementById("time-search");
+
+timeSearch.addEventListener("click",function() {
+	let chosenTime = "";
+	chosenTime = event.target.innerHTML;
+	let time = chosenTime.split(':');
+	let finalTime = time[0];
+	console.log(finalTime);
+		
+	for (let k = 0; k < attractionObj.length; k++) {
+		// console.log("for loop");
+		if (attractionObj[k].hasOwnProperty("times")!=true) {
+			console.log(attractionObj[k]);
+			$("#ridesToDom").append(altTimeTemplate(attractionObj[k]));
+		} else {}
+		
+
+		// if(!!attractionObj[k].hasOwnProperty("times"));
+		// 	$("#ridesToDom").append(altTimeTemplate(attractionObj[i]));
+		// } else if(timeSearch.value === attractionObj[k].times);
+		// 	$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));	
+	}
+});
+};
+
+
+
+module.exports = {timeSort};
+
+
+// timeSearch.addEventListener("click", function() {
+// 	}
+// }
+// })};
+},{"../templates/sideBar.hbs":28,"../templates/timeSideBar.hbs":29,"hbsfy/runtime":27}],8:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
