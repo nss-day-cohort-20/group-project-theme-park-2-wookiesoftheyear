@@ -1,7 +1,6 @@
 #body-container {
     height: 100%;
     width: 100%;
-    border: 5px solid green;
 }
 
 .container-fluid > .row {
@@ -9,19 +8,19 @@
 }
 
 .row {
-    border: 1px solid red;
+
 }
 
-.col-md-4 {
-    border: 1px solid blue;
+.fullMap .col-md-4 {
     min-width: 200px;
     min-height: 200px;
+    border: 1px dashed black;
 }
 
 .scroll {
-    border: 6px solid blue;
     overflow-y:scroll; 
     height: 606px;
+    background-color: lightgrey;
 }
 
 div.container-fluid > .row > .col-md-4 {
@@ -34,5 +33,4 @@ div.container-fluid > .row > .col-md-4 {
     background-position: top right;
     background-attachment: fixed;
     background-size: contain;
-
 }
