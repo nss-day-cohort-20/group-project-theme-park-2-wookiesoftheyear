@@ -12,11 +12,16 @@ let listRideNames = function(parkObj, areaObj, typesObj, attractionObj){
 	
 	let searchRides = document.getElementById("search-bar");
 	let submitSearch = document.getElementById("submit-button");
+	let eachGrid = document.getElementsByClassName("grid");
 
 	let typeID = "";
 	console.log("please work", typeID);
 
 submitSearch.addEventListener("click", function() {
+
+  for (let i = 0; i < eachGrid.length; i++) {
+		eachGrid[i].removeAttribute("style");
+	}
 $("#ridesToDom").empty();
 	for (let i = 0; i < attractionObj.length; i++) {
 		typeID = attractionObj[i].type_id;
@@ -52,6 +57,7 @@ $("#ridesToDom").empty();
 	}}}
 	
 });	
+
 };
 
 module.exports = {listRideNames};
