@@ -4,12 +4,13 @@
 	<title>Theme Park</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 	<!-- Nav Bar -->
-	<nav class="navbar navbar-default">
+	<nav class="navbar-custom navbar-fixed-top">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -19,8 +20,8 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">
-	        <img alt="Brand" src="images/logo.png" width="30px" height="30px">
+	      <a class="navbar-brand" href="index.html">
+	        <img alt="Brand" src="images/logo.png" width="200px" height="40px">
 	      </a>
 	    </div>
 	 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -35,19 +36,19 @@
 	        <li class="dropdown">
 	          <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Times <span class="caret"></span></a>
 	          <ul id="time-search" class="dropdown-menu">
-	            <li><a href="#" class="ride-times" value="9:">9:00AM - 10:00AM</a></li>
-                <li><a href="#" class="ride-times" value="10:">10:00AM - 11:00AM</a></li>
-                <li><a href="#" class="ride-times" value="11:">11:00AM - 12:00PM</a></li>
-                <li><a href="#" class="ride-times" value="12:">12:00PM - 1:00PM</a></li>
-                <li><a href="#" class="ride-times" value="1:">1:00PM - 2:00PM</a></li>
-                <li><a href="#" class="ride-times" value="2:">2:00PM - 3:00PM</a></li>
-                <li><a href="#" class="ride-times" value="3:">3:00PM - 4:00PM</a></li>
-                <li><a href="#" class="ride-times" value="4:">4:00PM - 5:00PM</a></li>
-                <li><a href="#" class="ride-times" value="5:">5:00PM - 6:00PM</a></li>
-                <li><a href="#" class="ride-times" value="6:">6:00PM - 7:00PM</a></li>
-                <li><a href="#" class="ride-times" value="7:">7:00PM - 8:00PM</a></li>
-                <li><a href="#" class="ride-times" value="8:">8:00PM - 9:00PM</a></li>
-                <li><a href="#" class="ride-times" value="9:">9:00PM - 10:00PM</a></li>
+	            <li><a href="#" onclick="return false;" class="ride-times" value="9:">9:00AM - 10:00AM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="10:">10:00AM - 11:00AM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="11:">11:00AM - 12:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="12:">12:00PM - 1:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="1:">1:00PM - 2:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="2:">2:00PM - 3:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="3:">3:00PM - 4:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="4:">4:00PM - 5:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="5:">5:00PM - 6:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="6:">6:00PM - 7:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="7:">7:00PM - 8:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="8:">8:00PM - 9:00PM</a></li>
+                <li><a href="#" onclick="return false;" class="ride-times" value="9:">9:00PM - 10:00PM</a></li>
 	          </ul>
 	        </li>
 	      </ul>
@@ -55,34 +56,29 @@
 	  </div><!-- /.container-fluid -->
 	</nav><!-- / Nav Bar -->
 
+	<div class="parallax"></div>
+
 	<div id="body-container" class="container-fluid">
 		<div class="row">
 
 		  <div class="col-md-4 scroll" id="ridesToDom">
-				<h3><a class="colorLink" href="#"></a></h3>
-				<div class="attractionInfo">
-					<p></p>
-					<ul>
-						<li></li>
-					</ul>
-				</div>
 		  </div>
 
 		  <div id="map" class="col-md-8">
 				<div class="row fullMap">
-				  <div id="1" class="col-md-4 grid">Grid 1</div>
-				  <div id="2" class="col-md-4 grid">Grid 2</div>
-				  <div id="3" class="col-md-4 grid">Grid 3</div>
+				  <div id="1" class="col-md-4 grid">Main Street U.S.A.</div>
+				  <div id="2" class="col-md-4 grid">Adventureland</div>
+				  <div id="3" class="col-md-4 grid">Frontierland</div>
 				</div>
 				<div class="row fullMap">
-				  <div id="4" class="col-md-4 grid">Grid 4</div>
-				  <div id="grid-5" class="col-md-4 grid">Grid 5: Currently selected to be empty</div>
-				  <div id="5" class="col-md-4 grid">Grid 6</div>
+				  <div id="4" class="col-md-4 grid">Liberty Square</div>
+				  <div id="grid-5" class="col-md-4 grid"></div>
+				  <div id="5" class="col-md-4 grid">Fantasyland</div>
 				</div>
 				<div class="row fullMap">
-				  <div id="6" class="col-md-4 grid">Grid 7</div>
-				  <div id="grid-8" class="col-md-4 grid">Grid 8: Currently selected to be empty</div>
-				  <div id="7" class="col-md-4 grid">Grid 9</div>
+				  <div id="6" class="col-md-4 grid">Tomorrowland</div>
+				  <div id="grid-8" class="col-md-4 grid"></div>
+				  <div id="7" class="col-md-4 grid">Cinderlla Castle</div>
 				</div>
 		  </div>
 		</div>
@@ -90,7 +86,7 @@
 
 	<footer class="navbar-bottom">
 		<div class="container">
-			<p>FOOTER</p>
+			<p><strong>&copy; 2017 Wookies of the Year</strong><p>
 		</div>
 	</footer>
 

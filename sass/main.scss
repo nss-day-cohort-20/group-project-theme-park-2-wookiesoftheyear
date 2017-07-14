@@ -1,32 +1,56 @@
+body {
+    font-family: "open sans", arial, sans-serif;
+}
+
+h3 {
+    font-family: oswald;
+}
+
 #body-container {
-    height: 100%;
-    width: 100%;
+    border-top: 1px solid white;
 }
 
-.container-fluid > .row {
-    min-height: 100%;
+
+/********** Cover Photo *********/
+.parallax {
+    /* The image used */
+    background-image: url("../images/cover-photo.jpg");
+
+    /* Set a specific height */
+    height: 800px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/********** /Cover Photo *********/
+
+
+
+/********** navbar *********/
+.navbar-custom {
+    background-color: midnightblue;
+    padding: 5px;
 }
 
-.row {
-
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
-.fullMap .col-md-4 {
-    min-width: 200px;
-    min-height: 200px;
-    border: 1px dashed black;
+li.dropdown a.dropdown-toggle {
+    color: #d4ad4e;
 }
+/********** /navbar *********/
 
-.scroll {
-    overflow-y:scroll; 
-    height: 606px;
-    background-color: lightgrey;
+
+/*********** Map **********/
+
+#map {
+    height: 675px;
 }
-
-div.container-fluid > .row > .col-md-4 {
-    max-height: 100%;
-}
-
 .col-md-8 {
     background-image: url("../images/map-of-disneyland.jpg");
     background-repeat: no-repeat;
@@ -34,7 +58,60 @@ div.container-fluid > .row > .col-md-4 {
     background-attachment: fixed;
     background-size: contain;
 }
+/*********** /Map **********/
+
+
+
+/********* Each Map Grid *******/
+.fullMap .col-md-4 {
+    min-width: 200px;
+    min-height: 225px;
+    border: 1px dashed white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: oswald;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px #000000;
+}
+/********** /Each Map Grid *******/
+
+
+
+/********** Info Side Bar *******/
+.scroll {
+    overflow-y:scroll;
+    height: 675px;
+    background-color: midnightblue;
+    color: white;
+}
+
+.scroll a {
+    color: white;
+}
+
+div.container-fluid > .row > .col-md-4 {
+    max-height: 100%;
+}
 
 .attractionInfo {
     display: none;
 }
+
+/********** /Info Side Bar *******/
+
+
+
+
+/*********** Footer **********/
+.navbar-bottom div.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-bottom div.container p {
+    padding-top: 5px;
+}
+/*********** Footer **********/
