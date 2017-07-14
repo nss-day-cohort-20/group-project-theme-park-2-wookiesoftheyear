@@ -18,7 +18,7 @@ let listRideNames = function(parkObj, areaObj, typesObj, attractionObj){
 	console.log("please work", typeID);
 
 submitSearch.addEventListener("click", function() {
-
+	searchRides.value = "";
   for (let i = 0; i < eachGrid.length; i++) {
 		eachGrid[i].removeAttribute("style");
 	}
@@ -55,8 +55,7 @@ $("#ridesToDom").empty();
 				}
 		}
 	}}}
-	
-});	
+});
 
 };
 

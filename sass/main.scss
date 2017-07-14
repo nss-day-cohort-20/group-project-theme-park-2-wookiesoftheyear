@@ -32,7 +32,8 @@ h3 {
 /********** navbar *********/
 .navbar-custom {
     background-color: midnightblue;
-    padding: 5px;
+    padding: 0px 5px;
+    height: 60px;
 }
 
 .navbar-brand {
@@ -42,6 +43,31 @@ h3 {
 
 li.dropdown a.dropdown-toggle {
     color: #d4ad4e;
+}
+
+
+.flex-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.search-and-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar {
+    width: 80%;
+    border-radius: 5px;
+}
+
+ul.nav {
+    padding-right: 50px;
+    padding-left: 50px;
 }
 /********** /navbar *********/
 
