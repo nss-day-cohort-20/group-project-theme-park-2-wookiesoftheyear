@@ -9,6 +9,8 @@ let timeSort = function(parkObj, areaObj, typesObj, attractionObj){
 
 	let eachGrid = document.getElementsByClassName("grid");
 
+	let timeID = "";
+
 	timeSearch.addEventListener("click", function() {
 		for (let i = 0; i < eachGrid.length; i++) {
 			eachGrid[i].removeAttribute("style");
@@ -17,15 +19,30 @@ let timeSort = function(parkObj, areaObj, typesObj, attractionObj){
 		let chosenTime = event.target.getAttribute('value');
 	  console.log("time", chosenTime);	
 		for (let i = 0; i < attractionObj.length; i++) {
-	    if (attractionObj[i].times) {
-				// for (let x = 0; x < attractionObj[k].times.length; x++) {
+			timeID = attractionObj[i].type_id;
+	    	if (attractionObj[i].times) {
+	    		for (let q = 0; q < typesObj.length; q++) {
+				if(timeID === typesObj[q].id) {
+				timeID = typesObj[q].name;
+
 				if (attractionObj[i].times.toString().includes(chosenTime)) {
-	        // console.log("attrObj", attractionObj[i].times.toString());
-					$("#ridesToDom").append(sideBarTemplate(attractionObj[i]));
+					let tempObj = {};
+					tempObj.name = attractionObj[i].name;
+					tempObj.id = timeID;
+					tempObj.description = attractionObj[i].description;
+					tempObj.times = attractionObj[i].times;
+					console.log("tempObj", tempObj);
+	       
+					$("#ridesToDom").append(sideBarTemplate(tempObj));
 			    }  else {
-					 $("#ridesToDom").append(altTimeTemplate(attractionObj[i]));
+			    	let tempObj = {};
+					tempObj.name = attractionObj[i].name;
+					tempObj.id = timeID;
+					tempObj.description = attractionObj[i].description;
+					tempObj.times = attractionObj[i].times;
+					$("#ridesToDom").append(altTimeTemplate(tempObj));
         }
-      }
+      }}}
 		}
 	});
 };
